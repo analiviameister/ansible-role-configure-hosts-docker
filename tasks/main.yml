@@ -61,11 +61,6 @@
   pip:
     name: docker-py==1.10.6
 
-- name: Copiar template do daemon.json
-  template:
-    src: templates/daemon.json.j2
-    dest: /etc/docker/daemon.json
-
 - name: Restartar serviço do docker
   systemd:
     name: docker
